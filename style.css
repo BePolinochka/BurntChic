@@ -1,0 +1,136 @@
+.game {
+    width: 600px;
+    height: 200px;
+    border-bottom: 3px solid #9ACD32;
+    margin: auto;
+    background-color: lightblue;
+
+}
+#background {
+    width: 600px;
+    height: 199px;
+    color: lightblue;
+}
+
+#chicken {
+    width: 80px;
+    height: 80px;
+    background-image: url("img/chicken.png");
+    background-size: 80px 80px;
+    position: relative;
+    top: 125px;
+}
+
+#flame {
+    width: 40px;
+    height: 60px;
+    background-image: url("img/flame.png");
+    background-size: 40px 60px;
+    position: relative;
+    top: 60px;
+    left: 550px;
+    animation: flameMove 2s infinite linear;
+}
+
+#cloud1{
+    width: 100px;
+    height: 80px;
+    background-image: url("img/cloud.png");
+    background-size: 100px 80px;
+    position: relative;
+    top: -160px;
+    left: 520px;
+    animation: cloud1Move 3s infinite linear, cloud1up-down 5s infinite linear;
+}
+
+#cloud2{
+    width: 160px;
+    height: 130px;
+    background-image: url("img/cloud.png");
+    background-size: 160px 130px;
+    position: relative;
+    top: -240px;
+    left: 480px;
+    animation: cloud1Move 5s infinite linear, cloud1up-down 4s infinite linear;
+}
+@keyframes flameMove {
+    0% {
+        left: 550px;
+    }
+    100% {
+        left: -10px;
+    }
+}
+@keyframes cloud1Move {
+    0% {
+        left: 520px;
+    }
+    100% {
+        left: -20px;
+    }
+}
+
+@keyframes cloud1up-down {
+    0% {
+        transform: translateY(30px);
+    }
+    20% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    55% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+@keyframes cloud2Move {
+    0% {
+        left: 520px;
+    }
+    100% {
+        left: -20px;
+    }
+}
+
+@keyframes cloud2up-down {
+    0% {
+        transform: translateY(30px);
+    }
+    20% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    55% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+.jump {
+    animation: jump 0.8s linear;
+}
+@keyframes jump {
+    0% {
+        top: 125px;
+    }
+    30% {
+        top: 80px;
+    }
+    50% {
+        top: 40px;
+    }
+    80% {
+        top: 80px;
+    }
+    100% {
+        top: 125px;
+    }
+}
